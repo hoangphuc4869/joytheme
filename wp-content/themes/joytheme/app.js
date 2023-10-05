@@ -9,13 +9,49 @@ if (search) {
 const close = document.querySelector(".close");
 const side = document.querySelector(".side-nav");
 const layer = document.querySelector(".layer");
-const sideNavIcon = document.querySelector(".mkdf-burger-svg-icon");
+const sideNavIcon = document.querySelector(".mkdf-burger-svg-icon .icon1");
+
+const sideNavIcon2 = document.querySelector(".mkdf-burger-svg-icon.icon2");
+const mobile = document.querySelector(".menu-mobile");
+
+sideNavIcon2.addEventListener("click", () => {
+  mobile.classList.toggle("showMobile");
+});
+
+function closeSideAndLayer() {
+  side.classList.remove("openSideNav");
+  side.classList.add("hideSideNav");
+  layer.classList.add("closeX");
+  layer.classList.remove("showlayer");
+}
+
 sideNavIcon.addEventListener("click", () => {
-  //   side.style.transform = "translateX(0)";
-  layer.style.display = "block";
+  layer.classList.remove("closeX");
+  layer.classList.add("showlayer");
+  side.classList.add("openSideNav");
+  side.classList.remove("hideSideNav");
 });
 
 close.addEventListener("click", () => {
-  side.classList.add("closeX");
-  //   layer.style.display = "none";
+  closeSideAndLayer();
+});
+
+layer.addEventListener("click", () => {
+  closeSideAndLayer();
+});
+
+var swiper = new Swiper(".mySwiper", {
+  centeredSlides: true,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
 });

@@ -1,0 +1,60 @@
+.slide img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
+}
+.slide {
+  position: relative;
+}
+
+.contentBox {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10%;
+}
+
+.contentBox-heading {
+  font-size: 100px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.cBText {
+  color: #fff;
+  font-size: "Lato", sans-serif;
+  font-size: 20px;
+  width: 80%;
+}
+
+.learn-more {
+  background: none;
+  border: 1px solid #fff;
+  padding: 10px 40px;
+  margin-top: 30px;
+  position: relative;
+}
+/* .learn-more::before {
+  content: "learn more";
+  position: absolute;
+  color: #000;
+  top: 0;
+
+  left: 0;
+  bottom: 0;
+  width: 0;
+  background: #fff;
+  z-index: 4;
+  transition: 1s ease;
+  opacity: 0;
+} */
+
+/* .learn-more:hover::before {
+  width: 100%;
+  opacity: 1;
+} */
+.learn-more a {
+  font-weight: 600;
+}

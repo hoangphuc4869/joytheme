@@ -4,6 +4,7 @@ function m_register_menu()
 	register_nav_menus(
 		array(
 			'menu-1' => __('Menu PC'),
+			'menu-2' => __('Menu Mobile'),
 			
 		)
 	);
