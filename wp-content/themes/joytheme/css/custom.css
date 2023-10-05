@@ -20,6 +20,18 @@
   font-size: 100px;
   color: #fff;
   font-weight: 600;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.contentBox-heading::before {
+  content: "";
+  width: 10%;
+  height: 2px;
+  position: absolute;
+  bottom: 10px;
+  z-index: 7;
+  background-color: #fff;
 }
 
 .cBText {
@@ -57,4 +69,104 @@
 } */
 .learn-more a {
   font-weight: 600;
+}
+
+.heading-next::after,
+.heading-prev::after {
+  display: none;
+}
+.swiper-button-prev.heading-prev {
+  left: 30px;
+}
+.swiper-button-next.heading-next {
+  right: 30px;
+}
+
+.HeadingSwiper .pag-heading {
+  bottom: 40px;
+}
+
+.pag-heading .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background: none;
+  border: 1px solid #fff;
+  opacity: 1;
+}
+.pag-heading .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: #fff;
+}
+
+.heading-services {
+  background-color: #000;
+  color: #fff;
+  padding: 70px 0;
+}
+
+.service-name {
+  margin: 20px 0 10px 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+.service {
+  margin-bottom: 40px;
+  padding-top: 20px;
+}
+
+.s-title {
+  text-transform: capitalize;
+  font-size: 40px;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 20px;
+}
+.s-title::before {
+  content: "";
+  width: 20%;
+  height: 2px;
+  position: absolute;
+  bottom: 10px;
+  z-index: 7;
+  background-color: #fff;
+}
+
+.portfolio .col-lg-3,
+.portfolio .col-lg-6 {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.port-item {
+  position: relative;
+  overflow: hidden;
+}
+.port-item img {
+  transition: 0.5s ease;
+}
+
+.port-item:hover img {
+  transform: scale(1.1);
+}
+.port-content {
+  position: absolute;
+  bottom: 20px;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 95%;
+  color: #fff;
+  padding: 50px;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: 0.5s ease;
+}
+.port-item:hover .port-content {
+  opacity: 1;
+  transform: translateX(0);
+}
+.port-content p {
+  margin-bottom: 0;
+}
+.port-content p:first-child {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
 }

@@ -25,12 +25,14 @@ function closeSideAndLayer() {
   layer.classList.remove("showlayer");
 }
 
-sideNavIcon.addEventListener("click", () => {
-  layer.classList.remove("closeX");
-  layer.classList.add("showlayer");
-  side.classList.add("openSideNav");
-  side.classList.remove("hideSideNav");
-});
+if (sideNavIcon) {
+  sideNavIcon.addEventListener("click", () => {
+    layer.classList.remove("closeX");
+    layer.classList.add("showlayer");
+    side.classList.add("openSideNav");
+    side.classList.remove("hideSideNav");
+  });
+}
 
 close.addEventListener("click", () => {
   closeSideAndLayer();
@@ -40,12 +42,14 @@ layer.addEventListener("click", () => {
   closeSideAndLayer();
 });
 
-var swiper = new Swiper(".mySwiper", {
-  centeredSlides: true,
+var swiper = new Swiper(".HeadingSwiper", {
+  slidesPerView: 1,
+
   autoplay: {
     delay: 2500,
     disableOnInteraction: false,
   },
+  loop: true,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
