@@ -9,7 +9,7 @@ if (search) {
 const close = document.querySelector(".close");
 const side = document.querySelector(".side-nav");
 const layer = document.querySelector(".layer");
-const sideNavIcon = document.querySelector(".mkdf-burger-svg-icon .icon1");
+const sideNavIcon = document.querySelector(".mkdf-burger-svg-icon.icon1");
 
 const sideNavIcon2 = document.querySelector(".mkdf-burger-svg-icon.icon2");
 const mobile = document.querySelector(".menu-mobile");
@@ -46,7 +46,7 @@ var swiper = new Swiper(".HeadingSwiper", {
   slidesPerView: 1,
 
   autoplay: {
-    delay: 2500,
+    delay: 3500,
     disableOnInteraction: false,
   },
   loop: true,
@@ -58,4 +58,14 @@ var swiper = new Swiper(".HeadingSwiper", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+});
+
+var swiper = new Swiper(".customerSlider", {
+  slidesPerView: 4,
+
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  loop: true,
 });
