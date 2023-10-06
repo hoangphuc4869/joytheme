@@ -1,9 +1,25 @@
+:root {
+  --animate-delay: 0.3s;
+}
+
+@keyframes zoomOut {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
 .slide img {
   width: 100%;
   height: 100vh;
   object-fit: cover;
   object-position: center;
+  animation: zoomOut 5s linear infinite;
+  /* animation-delay: 0s; */
 }
+
 .slide {
   position: relative;
 }
@@ -36,7 +52,7 @@
 
 .cBText {
   color: #fff;
-  font-size: "Lato", sans-serif;
+  font-family: "Lato", sans-serif;
   font-size: 20px;
   width: 80%;
 }
@@ -347,8 +363,211 @@
   transition: 0.3s ease;
   display: flex;
   gap: 5px;
-  margin: 0 auto;
+  justify-content: center;
 }
 .creative-people:hover .people-social {
   opacity: 1;
+}
+
+.people-social i {
+  margin-right: 10px;
+}
+
+.about-us-img img {
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.about-us-content {
+  background: #000;
+  color: #fff;
+  padding: 100px 0;
+}
+.b-h-title,
+.studio-title {
+  font-size: 40px;
+  font-weight: 600;
+
+  line-height: 1.14em;
+  font-family: "lato", sans-serif;
+  position: relative;
+  padding-bottom: 30px;
+
+  margin-bottom: 30px;
+}
+.b-h-title::before,
+.studio-title::before {
+  content: "";
+  width: 15%;
+  height: 2px;
+  position: absolute;
+  bottom: 0px;
+  z-index: 7;
+  background-color: #fff;
+}
+.brief-history {
+  padding-right: 50px;
+}
+
+.studio-info {
+  padding-left: 50px;
+}
+.brief-history p,
+.studio-text {
+  font-family: "lato", sans-serif;
+}
+
+.studio-add {
+  margin-top: 50px;
+}
+
+.address {
+  padding-right: 30px;
+}
+.numbers {
+  padding-left: 30px;
+}
+
+.add-title,
+.number-title {
+  font-weight: 600;
+
+  margin-bottom: 20px;
+}
+@media (max-width: 740px) {
+  .slide img {
+    height: 70vh;
+  }
+  .contentBox-heading {
+    font-size: 50px;
+    line-height: 1.2;
+  }
+  .swiper-button-next.heading-next {
+    right: 0;
+  }
+  .swiper-button-prev.heading-prev {
+    left: 0;
+  }
+  .cBText {
+    font-size: 16px;
+  }
+  .reviews {
+    padding: 30px 0;
+  }
+  .review-content {
+    font-size: 16px;
+  }
+  .swiper.customerSlider.swiper-initialized.swiper-horizontal.swiper-backface-hidden {
+    width: 100%;
+  }
+
+  .wwd-text {
+    padding: 30px;
+  }
+  .wwd-text-title {
+    width: 100%;
+  }
+  .creative-people {
+    margin-bottom: 20px;
+  }
+  .peo-info {
+    transform: rotate(-90deg) translateY(100%);
+    transform-origin: left bottom;
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    bottom: 0;
+    opacity: initial;
+    transition: 0.3s linear;
+    width: 123%;
+
+    background: rgba(0, 0, 0, 0.6);
+    padding: 5px 0;
+  }
+  .people-social {
+    opacity: 1;
+  }
+  .wwd-img img {
+    width: 100%;
+    transform: unset;
+  }
+  .meet-minds {
+    background: #000;
+    color: #fff;
+    padding: 45px 0;
+  }
+  .m-m-title {
+    font-size: 30px;
+  }
+}
+@media (max-width: 540px) {
+  .slide img {
+    height: 70vh;
+  }
+  .contentBox-heading {
+    font-size: 50px;
+    line-height: 1.2;
+  }
+  .swiper-button-next.heading-next {
+    right: 0;
+  }
+  .swiper-button-prev.heading-prev {
+    left: 0;
+  }
+  .cBText {
+    font-size: 16px;
+  }
+  .reviews {
+    padding: 30px 0;
+  }
+  .review-content {
+    font-size: 16px;
+  }
+  .swiper.customerSlider.swiper-initialized.swiper-horizontal.swiper-backface-hidden {
+    width: 100%;
+  }
+
+  .wwd-text {
+    padding: 30px;
+  }
+  .wwd-text-title {
+    width: 100%;
+  }
+  .creative-people {
+    margin-bottom: 20px;
+  }
+  .peo-info {
+    transform: rotate(-90deg) translateY(100%);
+    transform-origin: left bottom;
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    bottom: 0;
+    opacity: initial;
+    transition: 0.3s linear;
+    width: 123%;
+
+    background: rgba(0, 0, 0, 0.6);
+    padding: 5px 0;
+  }
+  .people-social {
+    opacity: 1;
+  }
+  .wwd-img img {
+    width: 100%;
+    transform: unset;
+  }
+  .meet-minds {
+    background: #000;
+    color: #fff;
+    padding: 45px 0;
+  }
+  .m-m-title {
+    font-size: 30px;
+  }
+  .port-content {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }

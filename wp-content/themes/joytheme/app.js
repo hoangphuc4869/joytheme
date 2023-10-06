@@ -46,7 +46,7 @@ var swiper = new Swiper(".HeadingSwiper", {
   slidesPerView: 1,
 
   autoplay: {
-    delay: 3500,
+    delay: 4000,
     disableOnInteraction: false,
   },
   loop: true,
@@ -68,4 +68,13 @@ var swiper = new Swiper(".customerSlider", {
     disableOnInteraction: false,
   },
   loop: true,
+  breakpoints: {
+    300: {
+      slidesPerView: 1,
+    },
+
+    800: {
+      slidesPerView: 4,
+    },
+  },
 });

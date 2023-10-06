@@ -9,15 +9,16 @@ get_header()?>
             <?php
             if(have_rows('slider-heading')):
             while(have_rows('slider-heading')): the_row() ?>
-            <div class="swiper-slide">
+            <div class="swiper-slide overflow-hidden">
                 <div class="slide">
                     <img src="<?php  echo get_sub_field('img')?>" alt="invalid img">
-                    <div class="contentBox">
-                        <div class="contentBox-heading"><?php  echo get_sub_field('name')?></div>
-                        <div class="cBText">
+                    <div class="contentBox  ">
+                        <div class="contentBox-heading animate__animated animate__bounceInRight">
+                            <?php  echo get_sub_field('name')?></div>
+                        <div class="cBText animate__animated animate__bounceInRight animate__delay-1s">
                             <?php  echo get_sub_field('des')?>
                         </div>
-                        <button class="learn-more"><a
+                        <button class="learn-more animate__animated animate__bounceInRight animate__delay-1s"><a
                                 href="<?php  echo get_sub_field('link')?>"><?php  echo get_sub_field('learn_more')?></a></button>
                     </div>
                 </div>
