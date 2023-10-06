@@ -20,11 +20,7 @@
                                     <?php echo get_sub_field('social_icon') ?>
                                 </a>
                                 <?php endwhile; endif; ?>
-
-
                             </div>
-
-
                         </div>
                     </div>
                 </div>

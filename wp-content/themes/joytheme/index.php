@@ -257,23 +257,39 @@ get_header()?>
 
 </div>
 
-<div class="meet-minds container">
-    <div class="m-m-title">
-        <?php echo get_field('meet-creative-people-title')?>
-    </div>
-    <div class="row">
-        <div class="col-lg-4">
-            <div class="creactive-people">
+<div class="meet-minds">
+    <div class="container">
+        <div class="m-m-title">
+            <?php echo get_field('meet-creative-people-title')?>
+        </div>
+        <div class="row">
+            <?php
+        if(have_rows('creative-people')):
+        while(have_rows('creative-people')): the_row() ?>
 
-                <div class="people-things">
-                    <img src="" alt="">
-                    <div class="peo-info">
-                        <div class="people-name"></div>
-                        <div class="people-job"></div>
+            <div class="col-lg-4">
+                <div class="creative-people">
+                    <div class="people-things">
+                        <img src="<?php echo get_sub_field('people-img')?>" alt="" class="img-fluid">
+                        <div class="peo-info">
+                            <div class="people-name"><?php echo get_sub_field('people-name')?></div>
+                            <div class="people-job"><?php echo get_sub_field('people-job')?></div>
+                        </div>
+                    </div>
+                    <div class="people-social">
+                        <?php
+                                if(have_rows('people-social')):
+                                while(have_rows('people-social')): the_row() ?>
+                        <a href="<?php echo get_sub_field('link') ?>">
+                            <?php echo get_sub_field('icon') ?>
+                        </a>
+                        <?php endwhile; endif; ?>
                     </div>
                 </div>
-
             </div>
+
+            <?php endwhile; endif; ?>
+
         </div>
     </div>
 </div>

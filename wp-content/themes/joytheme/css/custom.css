@@ -276,3 +276,79 @@
   font-family: "lato", sans-serif;
   color: #efefef;
 }
+
+.meet-minds {
+  background: #000;
+  color: #fff;
+  padding: 100px 0;
+}
+.m-m-title {
+  font-size: 40px;
+  font-weight: 600;
+
+  line-height: 1.14em;
+  font-family: "lato", sans-serif;
+  position: relative;
+  padding-bottom: 30px;
+  margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.m-m-title::before {
+  content: "";
+  width: 7%;
+  height: 2px;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 7;
+  background-color: #fff;
+}
+
+.people-things {
+  position: relative;
+  margin-bottom: 25px;
+}
+.peo-info {
+  transform: rotate(-90deg) translateY(100%);
+  transform-origin: left bottom; /* Điểm xoay, có thể thay đổi tùy ý */
+  display: flex;
+  gap: 10px;
+  position: absolute;
+  bottom: 0;
+  opacity: 0;
+  transition: 0.3s linear;
+}
+.creative-people {
+  width: 80%;
+
+  margin: 0 auto;
+}
+.creative-people:hover .peo-info {
+  transform: rotate(-90deg) translateY(-30%);
+
+  opacity: 1;
+  z-index: 6;
+}
+.people-things img {
+  transition: 0.3s ease;
+}
+
+.people-things:hover img {
+  transform: scale(0.9);
+}
+.creative-people:hover .people-things {
+  border: 1px solid #fff;
+}
+.people-social {
+  opacity: 0;
+  transition: 0.3s ease;
+  display: flex;
+  gap: 5px;
+  margin: 0 auto;
+}
+.creative-people:hover .people-social {
+  opacity: 1;
+}
