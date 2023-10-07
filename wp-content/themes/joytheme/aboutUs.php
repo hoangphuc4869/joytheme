@@ -46,6 +46,26 @@ get_header()?>
     </div>
 </div>
 
+<div class="process">
+    <div class="container">
+        <div class="row">
+            <?php
+            if(have_rows('processes')):
+            while(have_rows('processes')): the_row() ?>
+            <div class="col-lg-3 col-6">
+                <div class="circle-process">
+                    <div class="value">
+                        <span><?php echo get_sub_field('process') ?></span>
+                        <div class="value-name"><?php echo get_sub_field('name') ?></div>
+                    </div>
+                </div>
+            </div>
+            <?php endwhile; endif; ?>
+
+        </div>
+    </div>
+</div>
+
 
 
 <?php get_footer() ?>

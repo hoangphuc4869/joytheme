@@ -78,3 +78,22 @@ var swiper = new Swiper(".customerSlider", {
     },
   },
 });
+
+const circle = document.querySelectorAll(".circle-process");
+const value = document.querySelectorAll(".value span");
+
+if (circle) {
+  circle.forEach((c, index) => {
+    let start = 0;
+    let end = value[index].innerHTML;
+    let process = setInterval(() => {
+      start++;
+      value[index].innerHTML = start;
+
+      c.style.background = `conic-gradient(#fff ${start * 3.6}deg, #0c0b0b 0)`;
+      if (start == end) {
+        clearInterval(process);
+      }
+    }, 10);
+  });
+}
