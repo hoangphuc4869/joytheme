@@ -79,21 +79,35 @@ var swiper = new Swiper(".customerSlider", {
   },
 });
 
-const circle = document.querySelectorAll(".circle-process");
-const value = document.querySelectorAll(".value span");
+const checkScroll = document.querySelector(".process");
+window.addEventListener("scroll", activeProcess);
+function activeProcess() {
+  if (checkScroll) {
+    const trigger = (window.innerHeight / 5) * 4;
+    let itemTop = checkScroll.getBoundingClientRect().top;
+    if (itemTop < trigger) {
+      const circle = document.querySelectorAll(".circle-process");
+      const value = document.querySelectorAll(".value span");
 
-if (circle) {
-  circle.forEach((c, index) => {
-    let start = 0;
-    let end = value[index].innerHTML;
-    let process = setInterval(() => {
-      start++;
-      value[index].innerHTML = start;
+      if (circle) {
+        circle.forEach((c, index) => {
+          let start = 0;
+          let end = value[index].innerHTML;
+          let process = setInterval(() => {
+            start++;
+            value[index].innerHTML = start;
 
-      c.style.background = `conic-gradient(#fff ${start * 3.6}deg, #0c0b0b 0)`;
-      if (start == end) {
-        clearInterval(process);
+            c.style.background = `conic-gradient(#fff ${
+              start * 3.6
+            }deg, #0c0b0b 0)`;
+            if (start == end) {
+              clearInterval(process);
+            }
+          }, 10);
+        });
       }
-    }, 10);
-  });
+      window.removeEventListener("scroll", activeProcess);
+      hasScrolled = true;
+    }
+  }
 }

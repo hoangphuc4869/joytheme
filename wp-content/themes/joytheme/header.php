@@ -69,7 +69,7 @@
             </div>
             <div class="main-menu">
                 <div class="header_logo">
-                    <a href="<?php the_permalink() ?>">
+                    <a href="<?php echo home_url() ?>">
                         <img src="<?php echo get_field('header-logo','option')?>" alt="Invalid image">
                     </a>
                 </div>
@@ -140,4 +140,19 @@
             </div>
         </div>
 
+
+
+        <?php
+        if (!is_front_page()) { ?>
+        <div class="breadcr">
+            <div class="container breadcrumb-sec">
+                <div class="page-name"><?php echo the_title()?></div>
+                <?php
+                if ( function_exists('yoast_breadcrumb') ) {
+                yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
+                }
+                ?>
+            </div>
+        </div>
+        <?php }?>
     </header>

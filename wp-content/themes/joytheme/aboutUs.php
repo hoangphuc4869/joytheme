@@ -17,9 +17,11 @@ get_header()?>
                         <?php echo get_field('brief-history-title') ?>
                     </div>
                     <p> <?php echo get_field('brief-text') ?></p>
-                    <button class="learn-more">
-                        <a href="<?php  echo get_field('brief-link')?>"><?php  echo get_field('brief-btn')?></a>
-                    </button>
+
+                    <a class="learn-more"
+                        href="<?php  echo get_field('brief-link')?>"><?php  echo get_field('brief-btn')?>
+                    </a>
+
                 </div>
             </div>
             <div class="col-lg-6">

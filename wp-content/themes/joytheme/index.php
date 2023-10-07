@@ -18,8 +18,8 @@ get_header()?>
                         <div class="cBText animate__animated animate__bounceInRight animate__delay-1s">
                             <?php  echo get_sub_field('des')?>
                         </div>
-                        <button class="learn-more animate__animated animate__bounceInRight animate__delay-1s"><a
-                                href="<?php  echo get_sub_field('link')?>"><?php  echo get_sub_field('learn_more')?></a></button>
+                        <a class="learn-more animate__animated animate__bounceInRight animate__delay-1s"
+                            href="<?php  echo get_sub_field('link')?>"><?php  echo get_sub_field('learn_more')?></a>
                     </div>
                 </div>
             </div>
@@ -216,8 +216,9 @@ get_header()?>
                     <li><?php echo get_sub_field('do') ?></li>
                     <?php endwhile; endif; ?>
                 </ul>
-                <button class="learn-more"><a
-                        href="<?php  echo get_field('link-wwd')?>"><?php  echo get_field('learn-more-what-we-do')?></a></button>
+                <a class="learn-more"
+                    href="<?php  echo get_field('link-wwd')?>"><?php  echo get_field('learn-more-what-we-do')?>
+                </a>
             </div>
         </div>
         <div class="col-lg-6 overflow-hidden">
@@ -249,8 +250,9 @@ get_header()?>
                     <?php echo get_field('ourwork-text2') ?>
                 </p>
 
-                <button class="learn-more"><a
-                        href="<?php  echo get_field('link-our-work')?>"><?php  echo get_field('learn-more-our-work')?></a></button>
+                <a class="learn-more"
+                    href="<?php  echo get_field('link-our-work')?>"><?php  echo get_field('learn-more-our-work')?>
+                </a>
             </div>
         </div>
 
