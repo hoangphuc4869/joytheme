@@ -81,10 +81,10 @@
                             <?php endwhile; endif; ?>
 
                             <?php
-                                if(have_rows('phones', 'option')):
-                                while(have_rows('phones', 'option')): the_row() ?>
-                            <a href="tel: <?php echo get_sub_field('phone')?>">
-                                <?php echo get_sub_field('phone')?>
+                                if(have_rows('numbers', 'option')):
+                                while(have_rows('numbers', 'option')): the_row() ?>
+                            <a href="tel: <?php echo get_sub_field('number')?>">
+                                <?php echo get_sub_field('number')?>
                             </a> <br>
                             <?php endwhile; endif; ?>
                         </div>
