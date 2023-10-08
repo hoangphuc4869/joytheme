@@ -37,7 +37,7 @@ get_header()?>
 <div class="heading-services">
     <div class="container">
         <div class="row">
-            <div class="col-lg-3">
+            <div class="col-lg-3 col-6">
                 <div class="s-title">
                     <?php echo get_field('service-text')?>
                 </div>
@@ -65,7 +65,7 @@ get_header()?>
 
 <div class="portfolio container-fluid">
     <div class="row">
-        <div class="col-lg-3">
+        <div class="col-lg-3 col-6">
             <a href="<?php echo get_field('p1_link')?>">
                 <div class="port-item">
                     <img src="<?php echo get_field('p1-img')?>" alt="" class="img-fluid">
@@ -76,7 +76,7 @@ get_header()?>
                 </div>
             </a>
         </div>
-        <div class="col-lg-3">
+        <div class="col-lg-3 col-6">
             <a href="<?php echo get_field('p2_link')?>">
                 <div class="port-item">
                     <img src="<?php echo get_field('p2-img')?>" alt="" class="img-fluid">
@@ -109,7 +109,7 @@ get_header()?>
                 </div>
             </a>
         </div>
-        <div class="col-lg-3">
+        <div class="col-lg-3 col-6">
             <a href="<?php echo get_field('p5_link')?>">
                 <div class="port-item">
                     <img src="<?php echo get_field('p5-img')?>" alt="" class="img-fluid">
@@ -120,7 +120,7 @@ get_header()?>
                 </div>
             </a>
         </div>
-        <div class="col-lg-3">
+        <div class="col-lg-3 col-6">
             <a href="<?php echo get_field('p6_link')?>">
                 <div class="port-item">
                     <img src="<?php echo get_field('p6-img')?>" alt="" class="img-fluid">

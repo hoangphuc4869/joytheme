@@ -27,10 +27,36 @@
                 <div class="col-lg-3">
                     <div class="footer-item">
                         <div class="f-title">
-                            Check out our Blog:
+                            <?php echo get_field('blog-text', 'option')?>
                         </div>
                         <div class="f-content">
-                            <a href="#">
+                            <?php 
+                            $args = array(
+                                'posts_per_page' => 3,
+                                'post_type'      => 'post',
+                                'cat'            => 'blogs',
+                            );
+                            $the_query = new WP_Query( $args );
+                            ?>
+                            <?php if( $the_query->have_posts() ): ?>
+                            <?php while( $the_query->have_posts() ) : $the_query->the_post();
+                            $post_date = get_the_date('d. M Y');
+                            
+                             ?>
+                            <a href="<?php the_permalink()?>">
+                                <div class="blog">
+                                    <?php the_post_thumbnail()?>
+                                    <div class=" blog-info">
+                                        <div class="blog-name"><?php the_title()?></div>
+                                        <div class="blog-date"><?php echo $post_date?></div>
+                                    </div>
+                                </div>
+                            </a>
+                            <?php endwhile; ?>
+                            <?php endif; ?>
+                            <?php wp_reset_query(); ?>
+
+                            <!-- <a href="#">
                                 <div class="blog">
                                     <img src="https://overton.qodeinteractive.com/wp-content/uploads/2018/07/blog-1-img-1.jpg"
                                         alt="">
@@ -49,17 +75,7 @@
                                         <div class="blog-date">06. Jul 2018.</div>
                                     </div>
                                 </div>
-                            </a>
-                            <a href="#">
-                                <div class="blog">
-                                    <img src="https://overton.qodeinteractive.com/wp-content/uploads/2018/07/blog-1-img-1.jpg"
-                                        alt="">
-                                    <div class="blog-info">
-                                        <div class="blog-name">World Traveler</div>
-                                        <div class="blog-date">06. Jul 2018.</div>
-                                    </div>
-                                </div>
-                            </a>
+                            </a> -->
 
 
                         </div>

@@ -265,10 +265,12 @@ p#breadcrumbs {
 }
 .blog img {
   width: 25%;
+  height: auto;
 }
 .blog-date {
   font-weight: 600;
-  font-size: 18px;
+  font-size: 16px;
+  font-family: "Lato", sans-serif;
 }
 .f-content a {
   color: #fff;
